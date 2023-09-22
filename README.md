@@ -18,5 +18,7 @@
 
 - Typescript must be already installed.
 - Now run command
-- tsc inputFile.ts outputFile.js
-- tsc inputFile.ts outputFile.js -w --> this will watch the changes & tranpile the ts code to js automatically.
+  ```javascript
+      - tsc inputFile.ts outputFile.js
+      - tsc inputFile.ts outputFile.js -w  // --> this will watch the changes & tranpile the ts code to js automatically.
+  ```
