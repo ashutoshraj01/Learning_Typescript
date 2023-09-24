@@ -22,3 +22,68 @@
       - tsc inputFile.ts outputFile.js
       - tsc inputFile.ts outputFile.js -w  // --> this will watch the changes & tranpile the ts code to js automatically.
   ```
+
+##### Arrays
+
+```javascript
+1;
+let names = ["Mario", "Marian", "David"];
+names.push("Heath");
+names.push(22); // Not allowed
+
+2;
+let names = ["Mario", 33, "David", 91];
+names.push("Heath");
+names.push(22); // Allowed
+names.push(true); // Allowed
+names[1] = 123; // Allowed
+
+names = "String"; // names is an array. Its type can't be changed.
+```
+
+- Here variables types and values types both are fixed can't be modifed further.
+
+##### Objects
+
+```javascript
+   1.
+   let ninja = {
+     name: 'mario',
+     belt: 'black',
+     age: 22
+   }
+
+   ninja.age = 33;
+   ninja.name = "David"
+   ninja.age = "24" // Not allowed - change property type not possible.
+   ninja.skills:['Fighting'] // Not allowed - adding addtional property not allowed
+```
+
+## Explicit Types
+
+```javascript
+let name: string;
+let age: number;
+let isLoggedIn: boolean;
+```
+
+##### Arrays
+
+```javascript
+let ninjas: string[] = []; // we need to initalize ninjas with value of empty array otherwise it won't work.
+ninjas.push("David"); // It will work perfectly fine.
+
+let ninjas2: sting[];
+ninjas.push("David"); // It will throw err - Cannot read property 'push' of undefined.
+```
+
+#### Union Types
+
+- Creating array of different data types.
+- pipe symbol is used for union.
+
+```javascript
+let mixedArray: (string | numbers)[] = [];
+mixedArray.push(22);
+mixedArray.push("David");
+```
