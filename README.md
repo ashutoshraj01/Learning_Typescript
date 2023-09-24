@@ -86,4 +86,20 @@ ninjas.push("David"); // It will throw err - Cannot read property 'push' of unde
 let mixedArray: (string | numbers)[] = [];
 mixedArray.push(22);
 mixedArray.push("David");
+
+let uID: string | number;
+```
+
+#### Objects
+
+```javascript
+let ninjaObject: object;
+ninjaObject = { name: "Test", age: 22 };
+ninjaObject = []; // it can hold value of array as Array is a kind object.
+
+let ninjaObject2: {
+  name: string,
+  age: number,
+};
+// ninjaObject2 will only take two above defined property.
 ```
