@@ -121,11 +121,39 @@ age = { name: "Test" }; // changed type to Object but no error.
 ```javascript
   tsc --init // initializes typescript configuration
   tsc // Generate javascript file equivalent to typescript file. Source & output must be configured inside tsconfig.json
+  tsc -w // Will watch the changes & run automatically
 ```
 
-- Configuring tsconfig.json for source & output
+- Configuring tsconfig.json
 
 ```javascript
   "outdir": "./public", // All output JS files will be saved here in public folder.
   "rootdir":"./src" // source Files will pciked from src folder
+  "include": ["src"] // typescript will consider src folder as a input.
+```
+
+##### Functions
+
+- Greet varaible will now hold only function.
+- let greet: Function
+
+```javascript
+const add = (a: number, b: number, c?: number | string) => {
+  console.log(a + b);
+  // value of c will be undefined if not being passed
+};
+add(3, 4); // we are not passing third arguments as it is optional. '?' is used for adding optional property.
+
+// Using Default value
+const add = (a: number, b: number, c: number | string = 10) => {
+  console.log(a + b + c);
+  // Here we are not using optional property "?" as we are already providing default value.
+};
+add(3, 4); // If we pass any value for third argument, it will override it.
+
+// Return type of a function.
+const add(a:number):number{
+  return a+3;
+}
+// If it doesn't return anyvalue, we could use "void".
 ```
