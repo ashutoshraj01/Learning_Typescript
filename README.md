@@ -103,3 +103,29 @@ let ninjaObject2: {
 };
 // ninjaObject2 will only take two above defined property.
 ```
+
+##### Dynamic(any) Types
+
+```javascript
+let age: any = 22;
+age = true; // changed type to boolean but no error.
+age = { name: "Test" }; // changed type to Object but no error.
+```
+
+- With any type, we prefer using this only when we don't know the type of data it will be in future.
+
+##### tsconfig.json
+
+- initializes typescript configuration
+
+```javascript
+  tsc --init // initializes typescript configuration
+  tsc // Generate javascript file equivalent to typescript file. Source & output must be configured inside tsconfig.json
+```
+
+- Configuring tsconfig.json for source & output
+
+```javascript
+  "outdir": "./public", // All output JS files will be saved here in public folder.
+  "rootdir":"./src" // source Files will pciked from src folder
+```
