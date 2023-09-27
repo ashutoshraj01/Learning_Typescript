@@ -134,8 +134,8 @@ age = { name: "Test" }; // changed type to Object but no error.
 
 ##### Functions
 
-- Greet varaible will now hold only function.
 - let greet: Function
+- Greet varaible will now hold only function.
 
 ```javascript
 const add = (a: number, b: number, c?: number | string) => {
@@ -156,4 +156,20 @@ const add(a:number):number{
   return a+3;
 }
 // If it doesn't return anyvalue, we could use "void".
+
+let calc = (num1: number, num2: number) => number;
+
+calc = (numOne: number, numTwo:number) =>{
+  return numOne+numTwo;
+}
+---------------------
+type Person = {
+  name: string,
+  age: number
+}
+
+let logDetails:(obj: Person) => void;
+logDetails = (ninja: Person) => {
+  console.log(ninja.name)l
+}
 ```
